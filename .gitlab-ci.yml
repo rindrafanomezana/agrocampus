@@ -1,0 +1,9 @@
+pages:
+  image: boileaum/jupyter
+  script:
+    - pip install nbcourse
+    - nbcourse -n 5
+    - mv build public
+  artifacts:
+    paths:
+      - public
