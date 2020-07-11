@@ -1,6 +1,6 @@
-title: Apprendre Python pour les sciences
-slug_title: cours-python
-subtitle: Master Communication Scientifique, 2019-2020
+title: Markdown - GitHub - Docker
+slug_title: md-gh-docker
+subtitle: Master Science des Données, 2020-2021
 favicon: fig/favicon.ico
 book:
   file: md-gh-docker.pdf
@@ -21,7 +21,7 @@ links:
     target: manual.html
   binder:
     title: Exécuter
-    target: https://mybinder.org/v2/gh/pnavaro/big-data/master
+    target: https://mybinder.org/v2/git/https%3A%2F%2Fgitlab.math.unistra.fr%2Fnavaro%2Fagrocampus/master?filepath=notebooks
   book:
     title: Version pdf
   gitlab:
