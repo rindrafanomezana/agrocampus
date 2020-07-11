@@ -5,3 +5,4 @@ notebooks/.ipynb_checkpoints
 notebooks/sample.txt
 .doit.db
 build
+src
