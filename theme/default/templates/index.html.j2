@@ -1,0 +1,94 @@
+{% extends "base.html.j2" %}
+
+{% set link_icons =
+    {'manual':
+        {'path': 'img/Infobox_info_icon.svg',
+         'width': '35px'},
+    'binder':
+        {'path': 'https://mybinder.org/badge.svg',
+         'width': 'auto'},
+    'book':
+        {'path': 'img/Adobe_PDF_icon.svg',
+         'width': '30px'},
+    'gitlab':
+        {'path': 'img/GitLab_Logo.svg',
+         'width': '30px'},
+    'archive':
+        {'path': 'img/download.svg',
+         'width': '35px'}
+    }
+%}
+
+        {% block content %}
+        {% if picture %}
+        <img src="{{ picture.path }}" alt="{{ picture.path }}" width="{{ picture.width }}">
+        {% endif %}
+        {% if subtitle %}<h3>{{ subtitle }}</h3><hr>{% endif %}
+        <h1>{{ title }}</h1>
+        <hr>
+        <table>
+            <tr>
+                <th id="chap">Chapitre</th>
+                <th>Html</th> 
+                <th>Diaporama</th>
+                <th>Archive</th>
+            </tr>
+            {% for chapter in chapters %}
+            {% if chapter.preview_only %}
+            <tr style="opacity:0.5">
+                <td>{{ chapter.title }}</td>
+                <td><img width="25" src="img/favicon-notebook.ico"></td>
+                <td><img width="35" src="img/slideshow.png"></td>
+                <td><img width="35" src="img/download.svg"></td>
+            </tr>
+            {% else %}
+            <tr>
+                <td>{{ chapter.title }}</td>
+                <td><a href="{{ chapter.filename }}.html"><img width="25" src="img/favicon-notebook.ico"></a></td>
+                <td><a href="{{ chapter.filename }}.slides.html"><img width="35" src="img/slideshow.png"></a></td>
+                <td><a href="{{ chapter.filename }}.zip"><img width="35" src="img/download.svg"></a></td>
+            </tr>            
+            {% endif %}
+            {% endfor %}
+        </table>
+        <hr>
+        <table id="bottom">
+            <tr>
+                {% for link in links.values() %}
+                <td>{{ link.title }}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for link_type, link in links.items() %}
+                <td><a href="{{ link.target }}"><img src="{{ link_icons[link_type]['path'] }}" width="{{ link_icons[link_type]['width'] }}"></a></td>
+                {% endfor %}
+            </tr>
+        </table>   
+        <hr>
+        <table id="auteurs">
+            {% for author in authors %}
+            <tr>
+                {% if author.email %}
+                    <td><a href="mailto: {{ author.email }}"><img style="display:inline" width="20" src="img/email.svg"></a></td>
+                    <td>{{ author.name }}</td>
+                {% else %}
+                    <td><span style="display:none"></span></td>
+                    {% if author is mapping %}
+                    <td>{{ author.name }}</td>
+                    {% else %}
+                    <td>{{ author }}</td>
+                    {% endif %}
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+        {% if license %}
+        <div id="license">
+            <p>{{ license.text }}
+                <a href="{{ license.target }}">
+                    <img src="{{ license.icon.path }}" width="{{ license.icon.width }}">
+                </a>
+            </p>
+        </div>
+        {% endif %}
+        {% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base.html.j2" %}
+
+        {% block menu %}
+        <p class="menu">
+                <a href="index.html"><img src="img/Home_Icon.svg" width="20px"></a>
+                {% for page_title, page_html in menu %}
+                >
+                <a href="{{ page_html }}">{{ page_title }}</a>
+                {% endfor %}
+        </p>
+        {% endblock menu %}
+        {% block content %}
+        <h1>{{ title }}</h1>
+        {% if toc %}
+        {{ toc }}
+        {% endif %}
+        {{ article_content }}
+        {% endblock content %}

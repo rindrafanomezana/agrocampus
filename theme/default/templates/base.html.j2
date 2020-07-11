@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/codehilite/default.css">
+    <link rel="icon" type="image/x-icon" href="{% if favicon %}{{ favicon }}{% else %}img/favicon-notebook.ico{% endif %}">
+    
+</head>
+<body>
+    <div class="container">
+        {% block menu %}{% endblock menu %}
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>
