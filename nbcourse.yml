@@ -1,0 +1,43 @@
+title: Apprendre Python pour les sciences
+slug_title: cours-python
+subtitle: Master Communication Scientifique, 2019-2020
+favicon: fig/favicon.ico
+book:
+  file: md-gh-docker.pdf
+picture:
+    path: images/agrocampus-logo.png
+    width: 300px
+    alt: Logo Agrocampus
+authors:
+  - name: Pierre Navaro
+    email: pierre.navaro@univ-rennes1.fr
+chapter_preview_only:
+  - 3
+  - 4
+  - 5
+links:
+  manual:
+    title: Manual
+    target: manual.html
+  binder:
+    title: Exécuter
+    target: https://mybinder.org/v2/gh/pnavaro/big-data/master
+  book:
+    title: Version pdf
+  gitlab:
+    title: Sources
+    target: https://gitlab.math.unistra.fr/pnavaro/agrocampus
+  archive:
+    title: Archive complète
+license:
+  text: Contenu mis à disposition sous licence
+  target: https://creativecommons.org/licenses/by-sa/4.0/
+  icon:
+    path: img/by-sa.svg
+    width: 70px
+local_reveal: True
+nb:
+  dir: notebooks
+  material: 
+    - images
+    - data

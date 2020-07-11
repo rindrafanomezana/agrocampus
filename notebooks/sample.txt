@@ -1,0 +1,3 @@
+
+write the cell content to the file sample.txt.
+The file is created when you run this cell.
