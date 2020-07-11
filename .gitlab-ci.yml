@@ -4,6 +4,11 @@ pages:
     - pip install nbcourse
     - nbcourse -n 5
     - mv build public
+  tags:
+    - docker
+    - pages
+  only:
+    - master
   artifacts:
     paths:
       - public
