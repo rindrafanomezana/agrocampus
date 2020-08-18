@@ -1,0 +1,12 @@
+channels:
+  - r
+  - conda-forge
+dependencies:
+  - jupytext
+  - pandas
+  - seaborn
+  - scikit-learn
+  - tqdm
+  - pip
+  - pip:
+    - heat-magic
