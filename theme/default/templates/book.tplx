@@ -19,7 +19,7 @@
 ((* block docclass *))
 \documentclass[10pt, reprint, floatfix, groupaddress, prb, twoside]{book}
 
-\usepackage[francais]{babel}    % Pour la langue française
+\usepackage[french]{babel}    % Pour la langue française
 
 % Force floating figures to be [H]
 \usepackage{float}
