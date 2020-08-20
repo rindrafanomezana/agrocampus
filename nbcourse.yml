@@ -11,6 +11,8 @@ picture:
 authors:
   - name: Pierre Navaro
     email: pierre.navaro@univ-rennes1.fr
+-chapter_preview_only:
+  - 8
 links:
   manual:
     title: Manual
