@@ -3,7 +3,7 @@ slug_title: md-gh-docker
 subtitle: Master Science des Données, 2020-2021
 favicon: fig/favicon.ico
 book:
-  file: md-gh-docker.pdf
+  file: book.pdf
 picture:
     path: images/agrocampus-logo.png
     width: 300px
@@ -19,7 +19,7 @@ links:
     title: Exécuter
     target: https://mybinder.org/v2/git/https%3A%2F%2Fgitlab.math.unistra.fr%2Fnavaro%2Fagrocampus/master?filepath=notebooks
   book:
-    title: Version pdf
+    title: pdf
   gitlab:
     title: Sources
     target: https://gitlab.math.unistra.fr/pnavaro/agrocampus
