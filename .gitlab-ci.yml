@@ -1,8 +1,8 @@
 pages:
-  image: boileaum/jupyter
+  image: pnavaro/jupyter
   script:
     - pip install nbcourse
-    - nbcourse -n 5
+    - nbcourse -n 1
     - mv build public
   tags:
     - docker
