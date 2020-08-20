@@ -6,3 +6,4 @@ notebooks/sample.txt
 .doit.db
 build
 src
+notebooks/bspline.py
