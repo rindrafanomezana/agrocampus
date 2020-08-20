@@ -36,6 +36,7 @@ license:
     width: 70px
 local_reveal: True
 nb:
+  timeout: 300
   dir: notebooks
   material: 
     - images
