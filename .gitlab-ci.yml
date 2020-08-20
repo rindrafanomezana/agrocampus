@@ -1,7 +1,6 @@
 pages:
   image: pnavaro/jupyter
   script:
-    - julia -e 'using Pkg; Pkg.install(["Plots","DataFrames","StatsPlots"])'
     - pip install nbcourse
     - nbcourse -n 1
     - mv build public
