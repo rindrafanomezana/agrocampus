@@ -9,31 +9,23 @@ This course content is provided as Jupyter notebooks that require to be powered 
 
 ### Install Jupyter and other dependencies
 
-#### First install Anaconda
+#### First install Miniconda
 
-Anaconda is easy to install but the installer is quite heavy to download because it contains a lot of components.
-In particular, it is shipped with:
-
-- [Jupyter](http://jupyter.org/)
-- The [Spyder](https://github.com/spyder-ide/spyder) IDE
-- Scipy libraries: Numpy, Pandas, etc.
-
-For a detailed installation of Anaconda and its extensions on Windows, Mac or Linux, follow the instructions <a href="pages/anaconda.md"><img src="fig/anaconda.png" style="display:inline" alt="Anaconda logo" width="100px"></a>.
+For a detailed installation on Windows, Mac or Linux, follow the instructions <a href="pages/miniconda.md"><img src="images/conda_logo.svg" style="display:inline" alt="Conda logo" width="100px"></a>.
 
 #### Finalize installation with conda
 
 From the project root directory, type:
 
 ```bash
-conda install --file requirements.txt
+conda env update --file environment.yml
 ```
 
 ### Run a Jupyter notebook
 
 #### Start a Jupyter server
 
-- Either from Anaconda graphical interface
-- or from the command line interface from the project root directory:
+- From the command line interface (anaconda prompt on windows)  from the project root directory:
 
 ```bash
 jupyter-notebook
@@ -44,7 +36,3 @@ jupyter-notebook
 - Download and extract the archive of the first chapter
 - In the Jupyter, open the `.ipynb` file
 - Execute the notebook using the menu "Cell > Run All"
-
-## Optional: build and publish
-
-If you want be able to build and publish this course material, follow these [instructions](pages/build.md).
