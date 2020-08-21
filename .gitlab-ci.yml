@@ -1,9 +1,9 @@
 pages:
   image: pnavaro/jupyter
   script:
+    - julia -e `import Pkg; Pkg.activate(@__DIR__); Pkg.instantiate()`
     - pip install nbcourse
     - nbcourse -n 1
-    - mv build public
   tags:
     - docker
     - pages
@@ -11,4 +11,4 @@ pages:
     - master
   artifacts:
     paths:
-      - public
+      - build
