@@ -9,4 +9,4 @@ dependencies:
   - tqdm
   - pip
   - pip:
-    - heat-magic
+    - py-heat-magic
