@@ -1,7 +1,7 @@
 pages:
   image: pnavaro/jupyter
   script:
-    - julia --project -e `import Pkg; Pkg.instantiate()`
+    - julia --project -e 'import Pkg; Pkg.instantiate()'
     - pip install nbcourse
     - nbcourse -n 1
   tags:
