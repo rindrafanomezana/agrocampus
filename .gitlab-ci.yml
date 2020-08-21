@@ -4,6 +4,7 @@ pages:
     - julia --project -e 'import Pkg; Pkg.instantiate()'
     - pip install nbcourse
     - nbcourse -n 1
+    - mv build public
   tags:
     - docker
     - pages
@@ -11,4 +12,4 @@ pages:
     - master
   artifacts:
     paths:
-      - build
+      - public
