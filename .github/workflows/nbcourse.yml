@@ -10,11 +10,13 @@ jobs:
     - name: Install pandoc
       run: |
         sudo apt-get -yq update
-        sudo apt-get install -yq pandoc texlive-xetex texlive-fonts-extra gfortran ffmpeg
+        sudo apt-get install -yq pandoc texlive-xetex texlive-fonts-extra
     - name: Checkout
       uses: actions/checkout@v2
       with:
         persist-credentials: false
+    - name: Install Julia
+      run: julia -e 'using Pkg; Pkg.add(["IJulia","Plots","StatsPlots","DataFrames"]); Pkg.build("IJulia")'
     - name: Install Miniconda
       uses: goanpeca/setup-miniconda@v1
       with:
@@ -22,8 +24,8 @@ jobs:
     - name: Install dependencies and run nbcourse
       shell: bash -l {0}
       run: |
-        conda env create -f environment.yml -n runenv
-        conda run -n runenv python -m ipykernel install --user --name python3
+        conda env create -f environment.yml -n base
+        conda run -n base python -m ipykernel install --user --name python3
         conda run -n base python -m pip install nbcourse
         conda run -n base nbcourse -n 1
     - name: Deploy
