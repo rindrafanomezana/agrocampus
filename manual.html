@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <title>Manual</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/codehilite/default.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon-notebook.ico">
+    
+</head>
+<body>
+    <div class="container">
+        
+        <p class="menu">
+                <a href="index.html"><img src="img/Home_Icon.svg" width="20px"></a>
+                
+                >
+                <a href="manual.html">Manual</a>
+                
+        </p>
+        
+        
+        <h1>Manual</h1>
+        
+        <div class="toc">
+<ul>
+<li><a href="#execute-the-jupyter-notebooks">Execute the Jupyter notebooks</a><ul>
+<li><a href="#install-jupyter-and-other-dependencies">Install Jupyter and other dependencies</a><ul>
+<li><a href="#first-install-miniconda">First install Miniconda</a></li>
+<li><a href="#finalize-installation-with-conda">Finalize installation with conda</a></li>
+</ul>
+</li>
+<li><a href="#run-a-jupyter-notebook">Run a Jupyter notebook</a><ul>
+<li><a href="#start-a-jupyter-server">Start a Jupyter server</a></li>
+<li><a href="#execute-a-notebook">Execute a notebook</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+        
+        <h2 id="execute-the-jupyter-notebooks">
+ Execute the Jupyter notebooks
+</h2>
+<p>
+ This course content is provided as Jupyter notebooks that require to be powered by a Jupyter server with Python3 kernel.
+</p>
+<h3 id="install-jupyter-and-other-dependencies">
+ Install Jupyter and other dependencies
+</h3>
+<h4 id="first-install-miniconda">
+ First install Miniconda
+</h4>
+<p>
+ For a detailed installation on Windows, Mac or Linux, follow the instructions
+ <a href="miniconda.html">
+  <img alt="Conda logo" src="images/conda_logo.svg" style="display:inline" width="100px"/>
+ </a>
+ .
+</p>
+<h4 id="finalize-installation-with-conda">
+ Finalize installation with conda
+</h4>
+<p>
+ From the project root directory, type:
+</p>
+<div class="codehilite">
+ <pre><span></span><code>conda env update --file environment.yml
+</code></pre>
+</div>
+<h3 id="run-a-jupyter-notebook">
+ Run a Jupyter notebook
+</h3>
+<h4 id="start-a-jupyter-server">
+ Start a Jupyter server
+</h4>
+<ul>
+ <li>
+  From the command line interface (anaconda prompt on windows)  from the project root directory:
+ </li>
+</ul>
+<div class="codehilite">
+ <pre><span></span><code>jupyter-notebook
+</code></pre>
+</div>
+<h4 id="execute-a-notebook">
+ Execute a notebook
+</h4>
+<ul>
+ <li>
+  Download and extract the archive of the first chapter
+ </li>
+ <li>
+  In the Jupyter, open the
+  <code>
+   .ipynb
+  </code>
+  file
+ </li>
+ <li>
+  Execute the notebook using the menu "Cell &gt; Run All"
+ </li>
+</ul>
+        
+    </div>
+</body>
+</html>
