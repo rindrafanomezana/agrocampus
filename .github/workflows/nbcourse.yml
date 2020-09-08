@@ -26,7 +26,7 @@ jobs:
       run: |
         conda env update -f environment.yml -n runenv
         conda run -n runenv python -m ipykernel install --user --name python3
-        conda run -n base python -m pip install nbcourse
+        conda run -n base python -m pip install --ignore-installed nbcourse
         conda run -n base nbcourse -n 1
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.6.1
