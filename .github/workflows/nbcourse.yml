@@ -21,13 +21,16 @@ jobs:
       uses: goanpeca/setup-miniconda@v1
       with:
         miniconda-version: "latest"
-    - name: Install dependencies and run nbcourse
+    - name: Install dependencies
       shell: bash -l {0}
       run: |
         conda env update -f environment.yml -n runenv
         conda run -n runenv python -m ipykernel install --user --name python3
+        conda run -n runenv Rscript -e "IRkernel::installspec()" 
         conda run -n base python -m pip install --ignore-installed nbcourse
-        conda run -n base nbcourse -n 1
+    - name: Run nbcourse
+      shell: bash -l {0}
+      run: conda run -n base nbcourse -n 1
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
