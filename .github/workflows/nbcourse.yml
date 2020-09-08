@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies and run nbcourse
       shell: bash -l {0}
       run: |
-        conda env create -f environment.yml -n base
+        conda env update -f environment.yml -n base
         conda run -n base python -m ipykernel install --user --name python3
         conda run -n base python -m pip install nbcourse
         conda run -n base nbcourse -n 1
