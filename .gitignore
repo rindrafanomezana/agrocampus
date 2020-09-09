@@ -10,3 +10,4 @@ notebooks/bspline.py
 notebooks/prof.txt
 Manifest.toml
 *.swp
+notebooks/_build/

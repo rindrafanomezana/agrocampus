@@ -1,0 +1,7 @@
+title: GitHub, Markdown and Docker
+author: Pierre Navaro
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
