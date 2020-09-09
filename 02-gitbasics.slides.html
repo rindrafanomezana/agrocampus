@@ -13206,13 +13206,6 @@ a.anchor-link {
 <p>Site officiel <a href="https://git-scm.com">https://git-scm.com</a></p>
 <p>Le livre en français <a href="https://git-scm.com/book/fr/v2">https://git-scm.com/book/fr/v2</a></p>
 <p>Installer <a href="https://git-scm.com/downloads">Git</a> sur votre ordinateur</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Pourquoi-un-gestionnaire-de-version">Pourquoi un gestionnaire de version<a class="anchor-link" href="#Pourquoi-un-gestionnaire-de-version">&#182;</a></h2><ul>
 <li>Toutes les modifications sont enregistrées.</li>
 <li>A tout moment vous pouvez revenir sur une version précédente.</li>
@@ -13220,13 +13213,6 @@ a.anchor-link {
 <li>C'est la meilleure approche pour collaborer sur un document.</li>
 <li>Chaque modification est identifiée et datée.</li>
 </ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="GitHub">GitHub<a class="anchor-link" href="#GitHub">&#182;</a></h2><ul>
 <li>Service web utilisant Git comme gestionnaire de version. </li>
 <li>Github permet d'enregistrer et partager toutes les étapes de développement d'un logiciel ou de la rédaction d'un document au format texte au cours du temps. A tout moment vous pouvez revenir à une précedente version, l'ensemble de l'historique est toujours préservé. </li>
@@ -13234,29 +13220,6 @@ a.anchor-link {
 <li>Github est la plus grande bibliothèque de codes du monde.</li>
 <li>Fonctionne de plus en plus comme un réseau social et offre une grande visibilité à vos travaux.</li>
 </ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="SCM-(Source-Code-Management)">SCM (Source Code Management)<a class="anchor-link" href="#SCM-(Source-Code-Management)">&#182;</a></h2><ul>
-<li>Enregistrement des changements dans un ou plusieurs fichiers au cours du temps.</li>
-<li>Vous pouvez revenir à tout moment vers une version précedente.</li>
-<li>Fonctionne avec tout type de document.</li>
-<li>Excellent moyen pour collaborer sur un même document.</li>
-<li>Chaque modification enregistrée est datée avec le nom de son auteur.</li>
-<li>Les figures proviennent du <a href="http://git-scm.com/book">Pro Git book</a>.</li>
-<li>Ce support est fortement inspiré de <a href="https://www.atlassian.com/git/tutorials">"Become a git guru"</a>.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Gestion-distribu&#233;e-des-versions">Gestion distribu&#233;e des versions<a class="anchor-link" href="#Gestion-distribu&#233;e-des-versions">&#182;</a></h2><p><img src="images/git.png" alt="git" width="300px"/></p>
 <ul>
 <li>Chaque membre du projet possède une copie totale du projet</li>
@@ -13264,15 +13227,11 @@ a.anchor-link {
 <li>Pas besoin de connexion réseau</li>
 <li>Les sauvegardes sont très nombreuses grâce à ce système.</li>
 </ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Configuration">Configuration<a class="anchor-link" href="#Configuration">&#182;</a></h2><p>Il faut renseigner votre identité avec votre adresse de messagerie. 
-Ouvrir la console « Git bash »:</p>
+<h2 id="Installation-et-configuration">Installation et configuration<a class="anchor-link" href="#Installation-et-configuration">&#182;</a></h2><ul>
+<li>Télécharger et installer <a href="http://git-scm.com">Git pour windows</a>.</li>
+<li>Configuration: Il faut renseigner votre identité avec votre adresse de messagerie. </li>
+</ul>
+<p>Ouvrir la console « Git bash »:</p>
 
 <pre><code>git config --global user.name “Prenom Nom"
 git config --global user.email “prenom.nom@domaine.fr"</code></pre>
@@ -13283,7 +13242,7 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Enregistrer-sa-cl&#233;-SSH">Enregistrer sa cl&#233; SSH<a class="anchor-link" href="#Enregistrer-sa-cl&#233;-SSH">&#182;</a></h2><p>Saisissez la ligne suivante dasn le git bash:</p>
+<h2 id="Cr&#233;er-sa-cl&#233;-SSH">Cr&#233;er sa cl&#233; SSH<a class="anchor-link" href="#Cr&#233;er-sa-cl&#233;-SSH">&#182;</a></h2><p>Saisissez la ligne suivante dasn le git bash:</p>
 <div class="highlight"><pre><span></span>ssh-keygen
 </pre></div>
 <p>Valider les questions suivantes :</p>
@@ -13292,7 +13251,17 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 <p>appuyer sur « enter » ou saisir le nom du certificat puis « enter »</p>
 
 <pre><code>Enter passphrase (empty for no passphrase):</code></pre>
-<p>Appuyer sur "enter" (conseillé) ou saisir un mot de passe</p>
+<p>Appuyer sur "enter" (conseillé) ou saisir un mot de passe.  Deux fichiers on été créés : un clé publique et une clé privée. La clé publique sera celle que l'on pourra partager et la clé privée ne doit être communiquée sous aucun prétexte, elle est comme un mot de passe. Si vous la perder vous devrez recommencer la procédure.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Cr&#233;er-votre-compte-GitHub">Cr&#233;er votre compte GitHub<a class="anchor-link" href="#Cr&#233;er-votre-compte-GitHub">&#182;</a></h2><p>Il suffit de cliquer en haut à droite sur <code>Sign Up</code></p>
+<p>Une fois que le compte a été créé allez sur le dépot <a href="https://github.com/pnavaro/agrocampus">https://github.com/pnavaro/agrocampus</a> et cliquez sur <code>Fork</code> en haut à droite.</p>
+<p>Vous aurez une copie de ces transparents sur votre compte GitHub.</p>
 
 </div>
 </div>
@@ -13300,7 +13269,7 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Clonage-du-d&#233;p&#244;t">Clonage du d&#233;p&#244;t<a class="anchor-link" href="#Clonage-du-d&#233;p&#244;t">&#182;</a></h2><div class="highlight"><pre><span></span>git clone https://github.com/pnavaro/agrocampus.git
+<h2 id="Clonage-du-d&#233;p&#244;t">Clonage du d&#233;p&#244;t<a class="anchor-link" href="#Clonage-du-d&#233;p&#244;t">&#182;</a></h2><div class="highlight"><pre><span></span>git clone https://github.com/<span class="o">{</span>GITHUB_LOGIN<span class="o">}</span>/agrocampus.git
 </pre></div>
 
 </div>
@@ -13309,7 +13278,7 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Branche">Branche<a class="anchor-link" href="#Branche">&#182;</a></h2><div class="highlight"><pre><span></span>git checkout -b my_branch
+<h2 id="Branche">Branche<a class="anchor-link" href="#Branche">&#182;</a></h2><div class="highlight"><pre><span></span>git checkout -b dev
 </pre></div>
 <p>Permet de "figer" une version personnelle locale sur laquelle vous pouvez travailler sans modifier la branche principale "master".</p>
 
@@ -13344,8 +13313,7 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git status
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 
     </div>
@@ -13361,15 +13329,12 @@ git status
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>On branch master
-Your branch is up to date with &#39;origin/master&#39;.
-
-Untracked files:
-  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
-	../.doit.db.dat
-
-nothing added to commit but untracked files present (use &#34;git add&#34; to track)
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-1-d93c8dd246e3&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    git status</span>
+        ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
 </div>
