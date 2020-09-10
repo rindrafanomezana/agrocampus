@@ -13,7 +13,7 @@ authors:
     email: pierre.navaro@univ-rennes1.fr
 links:
   manual:
-    title: Manual
+    title: Guide
     target: manual.html
   binder:
     title: Exécuter
