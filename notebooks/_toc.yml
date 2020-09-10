@@ -1,7 +1,5 @@
 - file: intro
-- file: content
   sections:
-    - file: markdown
     - file: 01-jupyter
     - file: 02-gitbasics
     - file: 03-markdown
