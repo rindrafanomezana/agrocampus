@@ -14259,9 +14259,9 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="GitHub">GitHub<a class="anchor-link" href="#GitHub">&#182;</a></h2><ul>
-<li>Service web utilisant Git comme gestionnaire de version. </li>
+<li>Service web appartenant à Microsoft utilisant Git comme gestionnaire de version. </li>
 <li>Github permet de collaborer toutes les étapes de développement d'un logiciel ou de la rédaction d'un document au format texte au cours du temps.</li>
-<li>Github permet d'organiser cette collaboration avec différents niveaux d'accès, la gestion des bugs et l'hébergement de la documentation.</li>
+<li>Github permet d'organiser cette collaboration avec différents niveaux d'accès, la gestion des bugs, l'hébergement de la documentation et une mécanisme d'intégration continue.</li>
 <li>Github est la plus grande bibliothèque de codes du monde et on y retrouve les meilleures développeurs.</li>
 <li>Fonctionne de plus en plus comme un réseau social et offre une grande visibilité à vos travaux.</li>
 </ul>
@@ -14289,8 +14289,19 @@ a.anchor-link {
 </ul>
 <p>Ouvrir la console « Git bash »:</p>
 
-<pre><code>git config --global user.name “Prenom Nom"
-git config --global user.email “prenom.nom@domaine.fr"</code></pre>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git config --global user.name “Prenom Nom"
+git config --global user.email “prenom.nom@domaine.fr"</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Utiliser la même adresse que pour votre compte GitHub. Verifier la configuration avec:</p>
+<p>git config --list</p>
 
 </div>
 </div>
@@ -14311,9 +14322,9 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Cr&#233;er-votre-compte-GitHub">Cr&#233;er votre compte GitHub<a class="anchor-link" href="#Cr&#233;er-votre-compte-GitHub">&#182;</a></h2><p>Il suffit de cliquer en haut à droite sur <code>Sign Up</code></p>
+<h2 id="Cr&#233;er-votre-compte-GitHub">Cr&#233;er votre compte GitHub<a class="anchor-link" href="#Cr&#233;er-votre-compte-GitHub">&#182;</a></h2><p>Il suffit de cliquer en haut à droite sur <code>Sign Up</code>. Ajouter votre clé publique dans votre profile (Settings -&gt; SSH and GPG keys -&gt; New SSH key)</p>
 <p>Une fois que le compte a été créé allez sur le dépot <a href="https://github.com/pnavaro/agrocampus">https://github.com/pnavaro/agrocampus</a> et cliquez sur <code>Fork</code> en haut à droite.</p>
-<p>Vous aurez une copie de ces transparents sur votre compte GitHub.</p>
+<p>Vous aurez une copie de ces transparents sur votre compte GitHub que vous pourrez modifier.</p>
 
 </div>
 </div>
@@ -14326,84 +14337,63 @@ git config --global user.email “prenom.nom@domaine.fr"</code></pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Branche">Branche<a class="anchor-link" href="#Branche">&#182;</a></h2><div class="highlight"><pre><span></span>git checkout -b dev
+<h2 id="Verifier-l'&#233;tat-du-d&#233;p&#244;t-et-les-fichiers-modifi&#233;s">Verifier l'&#233;tat du d&#233;p&#244;t et les fichiers modifi&#233;s<a class="anchor-link" href="#Verifier-l'&#233;tat-du-d&#233;p&#244;t-et-les-fichiers-modifi&#233;s">&#182;</a></h2><div class="highlight"><pre><span></span><span class="nb">cd</span> agrocampus
+git status
 </pre></div>
-<p>Permet de "figer" une version personnelle locale sur laquelle vous pouvez travailler sans modifier la branche principale "master".</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Ajouter-un-fichier-dans-l'index">Ajouter un fichier dans l'index<a class="anchor-link" href="#Ajouter-un-fichier-dans-l'index">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>touch test.md</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git status</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La commande <code>add</code> est nécessaire pour un nouveau fichier mais aussi pour un fichier qui a été modifié.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git add test.md</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git status</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Validation-et-sauvegarde-(commit)">Validation et sauvegarde (commit)<a class="anchor-link" href="#Validation-et-sauvegarde-(commit)">&#182;</a></h2><div class="highlight"><pre><span></span>git commit -m <span class="s1">&#39;Create the file touch.md&#39;</span>
+</pre></div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git status</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Les-diff&#233;rents-&#233;tats-des-fichiers-dans-la-copie-du-d&#233;p&#244;t">Les diff&#233;rents &#233;tats des fichiers dans la copie du d&#233;p&#244;t<a class="anchor-link" href="#Les-diff&#233;rents-&#233;tats-des-fichiers-dans-la-copie-du-d&#233;p&#244;t">&#182;</a></h2><p><img src="images/18333fig0201-tn.png" alt="git" width="450px"/></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Git-Workflow">Git Workflow<a class="anchor-link" href="#Git-Workflow">&#182;</a></h2><p><img src="images/four_stages.png" alt="git" width="150px"/></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Verifier-les-fichiers-modifi&#233;s">Verifier les fichiers modifi&#233;s<a class="anchor-link" href="#Verifier-les-fichiers-modifi&#233;s">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git status
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>On branch master
-Your branch is up to date with &#39;origin/master&#39;.
-
-Untracked files:
-  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
-	../.doit.db.dat
-
-nothing added to commit but untracked files present (use &#34;git add&#34; to track)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Ajouter-un-fichier-dans-l'index">Ajouter un fichier dans l'index<a class="anchor-link" href="#Ajouter-un-fichier-dans-l'index">&#182;</a></h2><div class="highlight"><pre><span></span>git add your_notebook_copy.ipynb
-</pre></div>
-<p>Cette commande est nécessaire pour un nouveau fichier mais aussi pour un fichier qui a été modifié.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Validation-et-sauvegarde-(commit)">Validation et sauvegarde (commit)<a class="anchor-link" href="#Validation-et-sauvegarde-(commit)">&#182;</a></h2><div class="highlight"><pre><span></span>git commit -m <span class="s1">&#39;A propos de mes modifications&#39;</span>
-</pre></div>
 
 </div>
 </div>
@@ -14416,23 +14406,57 @@ votre version locale. Toutes les branches commencant par "origin/*" seront mises
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span>git fetch origin
-git branch -a   <span class="c1"># pour voir toutes les branches</span>
-</pre></div>
+<p>git fetch origin</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Fusionner-la-branche-distante-avec-la-branche-locale">Fusionner la branche distante avec la branche locale<a class="anchor-link" href="#Fusionner-la-branche-distante-avec-la-branche-locale">&#182;</a></h2><div class="highlight"><pre><span></span>git merge origin/master
+<p>git branch -a</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git status</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Mettre-&#224;-jour-le-d&#233;p&#244;t-distant">Mettre &#224; jour le d&#233;p&#244;t distant<a class="anchor-link" href="#Mettre-&#224;-jour-le-d&#233;p&#244;t-distant">&#182;</a></h2><p>Votre <code>commit</code> sera téléversé sur le serveur git</p>
+<ul>
+<li><code>origin</code> correspond au dépôt distant</li>
+<li><code>master</code> la branche que vous souhaitez mettre à jour</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git push origin master</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Git-Workflow">Git Workflow<a class="anchor-link" href="#Git-Workflow">&#182;</a></h2><p><img src="images/four_stages.png" alt="git" width="150px"/></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Fusionner-la-branche-distante-avec-la-branche-locale">Fusionner la branche distante avec la branche locale<a class="anchor-link" href="#Fusionner-la-branche-distante-avec-la-branche-locale">&#182;</a></h2><p>Si la version distante est en avance sur la version locale, il existe différentes manières de récupérer les modifications:</p>
+<div class="highlight"><pre><span></span>git fetch origin
+git merge origin/master
 </pre></div>
 <p>Les deux étapes précédentes peuvent être effectuées en une seule commande avec</p>
 <div class="highlight"><pre><span></span>git pull origin master
 </pre></div>
-<p>Je déconseille cette approche car avec le <code>git fetch</code> on peut anticiper des conflits.</p>
+<p>Je déconseille cette approche car avec le <code>git fetch</code> on peut anticiper des conflits avec</p>
 <div class="highlight"><pre><span></span>git diff origin/master
 </pre></div>
-<p>ou en version graphique si l'outil st installé sur votre poste:</p>
+<p>ou en version graphique si l'outil est installé sur votre poste:</p>
 <div class="highlight"><pre><span></span>git difftool origin/master
 </pre></div>
 
@@ -14441,6 +14465,11 @@ git branch -a   <span class="c1"># pour voir toutes les branches</span>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="R&#233;soudre-les-conflits">R&#233;soudre les conflits<a class="anchor-link" href="#R&#233;soudre-les-conflits">&#182;</a></h2><ul>
+<li>Cette outil permet de choisir les modifications lorsque qu'un fichier a été modifié au même endroit.</li>
+</ul>
+<div class="highlight"><pre><span></span>git mergetool
+</pre></div>
+<ul>
 <li>En cas de problèmes sur un fichier, vous pouvez annuler toutes les modifications non validées par un <em>commit</em> avec :</li>
 </ul>
 <div class="highlight"><pre><span></span>git checkout mon_fichier_modif
@@ -14456,132 +14485,59 @@ git branch -a   <span class="c1"># pour voir toutes les branches</span>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Prise-en-main">Prise en main<a class="anchor-link" href="#Prise-en-main">&#182;</a></h2><h3 id="Configuration">Configuration<a class="anchor-link" href="#Configuration">&#182;</a></h3><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Prenom Nom&quot;</span>
-git config --global user.email <span class="s2">&quot;prenom.nom@univ-rennes1.fr&quot;</span>
-</pre></div>
+<h2 id="Mettre-en-place-git-sur-un-r&#233;pertoire-existant">Mettre en place git sur un r&#233;pertoire existant<a class="anchor-link" href="#Mettre-en-place-git-sur-un-r&#233;pertoire-existant">&#182;</a></h2><p>Imaginons un nouveau répertoire où nous nous allons ajouter un fichier README:</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Utiliser la même adresse que pour votre compte GitHub. Verifier la configuration avec:</p>
+<p>mkdir sandbox
+cd sandbox
+touch README.md
+echo "# Test " &gt;&gt; README.md
+ls</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git config --list
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>filter.lfs.clean=git-lfs clean -- %f
-filter.lfs.smudge=git-lfs smudge -- %f
-filter.lfs.process=git-lfs filter-process
-filter.lfs.required=true
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-remote.origin.url=https://github.com/pnavaro/agrocampus
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-gc.auto=0
-branch.master.remote=origin
-branch.master.merge=refs/heads/master
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Mettre-en-place-git-sur-un-r&#233;pertoire-existant">Mettre en place git sur un r&#233;pertoire existant<a class="anchor-link" href="#Mettre-en-place-git-sur-un-r&#233;pertoire-existant">&#182;</a></h2><p>Imaginons un article avec deux fichiers:</p>
-
-<pre><code>$ mkdir sandbox
-$ cd sandbox
-$ touch document.tex figure.png
-$ ls article
-    document.tex    figure.png
-$ git init
-    Initialized empty Git repository in /Users/navaro/article/.git/
-$ git status
-    On branch master
-    Initial commit
-    Untracked files:
-     (use "git add &lt;file&gt;..." to include in what will be committed)
-
-        document.tex
-        figure.png
-
-    nothing added to commit but untracked files present
-    (use "git add" to track)</code></pre>
+<p>git init
+git status</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Ajouter-les-fichiers-au-d&#233;p&#244;t-git">Ajouter les fichiers au d&#233;p&#244;t git<a class="anchor-link" href="#Ajouter-les-fichiers-au-d&#233;p&#244;t-git">&#182;</a></h2>
-<pre><code>$ git add document.tex
-$ git add figure.png
-$ git status
-    On branch master
-    Initial commit
-    Changes to be committed:
-     (use "git rm --cached &lt;file&gt;..." to unstage)
-
-        new file:   document.tex
-        new file:   figure.png
-
-$ git commit -m 'Initial project version'}
-    [master (root-commit) 9d23b49] Initial project version
-    2 files changed, 0 insertions(+), 0 deletions(-)
-    create mode 100644 document.tex
-    create mode 100644 figure.png</code></pre>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git add README.md
+git status</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Add--et-commit"><code>Add</code>  et <code>commit</code><a class="anchor-link" href="#Add--et-commit">&#182;</a></h2><div class="highlight"><pre><span></span>git add document.tex figure.png
-git commit -m <span class="s1">&#39;Add my contribution to the project&#39;</span>
-</pre></div>
-<p>Vos fichiers ne sont pas encore présents sur le serveur. Il faut créer un dépot github, que vous pouvez appeler
-sandbox:</p>
+<p>git commit -m 'Initial project version'</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Mettre-le-d&#233;p&#244;t-sur-GitHub">Mettre le d&#233;p&#244;t sur GitHub<a class="anchor-link" href="#Mettre-le-d&#233;p&#244;t-sur-GitHub">&#182;</a></h2><p>Créer un dépot github, que nous appelerons <code>sandbox</code> :</p>
 <ul>
 <li>Cliquer sur le '+' en haut à droite et "New repository"</li>
 <li>Repository name = "sandbox"</li>
 <li>Laisser les options par défaut</li>
 <li>Cliquer sur "Create repository"</li>
 </ul>
-<div class="highlight"><pre><span></span>git remote add origin git@github.com:pnavaro/sandbox.git
+<div class="highlight"><pre><span></span>git remote add origin git@github.com:<span class="o">{</span>GITHUB_LOGIN<span class="o">}</span>/sandbox.git
+git fetch origin
 </pre></div>
+<p>Remplacez {GITHUB_LOGIN}</p>
 <div class="highlight"><pre><span></span>git status
-    On branch master
-    Your branch is ahead of <span class="s1">&#39;origin/master&#39;</span> by <span class="m">1</span> commit.
-    <span class="o">(</span>use <span class="s2">&quot;git push&quot;</span> to publish your <span class="nb">local</span> commits<span class="o">)</span>
 </pre></div>
 
 </div>
@@ -14590,20 +14546,23 @@ sandbox:</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&quot;Push&quot;">"Push"<a class="anchor-link" href="#&quot;Push&quot;">&#182;</a></h2><p>par défaut vous êtes sur la branche "master"</p>
 
-<pre><code>$ git branch
-    * master</code></pre>
-<p>"Pousser" voos fichiers sur le serveur</p>
-
-<pre><code>$ git push -u origin master
-    ...
-    To https://github.com/pnavaro/irmar-git-project
-        ae2ce3c..ed796ea  master -&gt; master</code></pre>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git branch</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Git-Workflow">Git Workflow<a class="anchor-link" href="#Git-Workflow">&#182;</a></h2><p><img src="images/four_stages.png" alt="4-stages">{width=10%}</p>
+<p>"Pousser" vos fichiers sur le serveur, l'option <code>-u</code> est nécessaire pour le premier push.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git push -u origin master</p>
 
 </div>
 </div>
@@ -14611,136 +14570,31 @@ sandbox:</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Afficher-les-branches">Afficher les branches<a class="anchor-link" href="#Afficher-les-branches">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git branch -a
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>* master
-  remotes/origin/master
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Cr&#233;er-une-branche">Cr&#233;er une branche<a class="anchor-link" href="#Cr&#233;er-une-branche">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git branch mabranche
-git checkout mabranche
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Switched to branch &#39;mabranche&#39;
-</pre>
-</div>
-</div>
+<p>git branch -a</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Cr&#233;er-une-branche">Cr&#233;er une branche<a class="anchor-link" href="#Cr&#233;er-une-branche">&#182;</a></h2><p>Permet de "figer" une version personnelle locale sur laquelle vous pouvez travailler sans modifier la branche principale "master".</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git branch mabranche
+git checkout mabranche</p>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git branch
-</pre></div>
-
-     </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>* mabranche
-  master
-</pre>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git branch</p>
 
 </div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14752,123 +14606,41 @@ git branch
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Modifier-un-fichier">Modifier un fichier<a class="anchor-link" href="#Modifier-un-fichier">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git status
-</pre></div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>date &gt;&gt; README.md</p>
 
-     </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>On branch mabranche
-Untracked files:
-  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
-	../.doit.db.dat
-
-nothing added to commit but untracked files present (use &#34;git add&#34; to track)
-</pre>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git status</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git diff</p>
 
 </div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git diff
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Enregister-les-modifications">Enregister les modifications<a class="anchor-link" href="#Enregister-les-modifications">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git add intro.md
-</pre></div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git add README.md</p>
 
-     </div>
 </div>
 </div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git status
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>On branch mabranche
-Untracked files:
-  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
-	../.doit.db.dat
-
-nothing added to commit but untracked files present (use &#34;git add&#34; to track)
-</pre>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git status</p>
 
 </div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14877,8 +14649,7 @@ nothing added to commit but untracked files present (use &#34;git add&#34; to tr
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>%%bash
-git commit -m 'Some modifications'</p>
+<p>git commit -m 'Add today date in README'</p>
 
 </div>
 </div>
@@ -14898,318 +14669,50 @@ git commit -m 'Some modifications'</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Partager-votre-travail-sur-le-serveur">Partager votre travail sur le serveur<a class="anchor-link" href="#Partager-votre-travail-sur-le-serveur">&#182;</a></h2><h3 id="Option-1-:-fusionner-sur-la-branche-principale-et-pousser">Option 1 : fusionner sur la branche principale et pousser<a class="anchor-link" href="#Option-1-:-fusionner-sur-la-branche-principale-et-pousser">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git checkout master
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git checkout master
 git merge mabranche
-git push origin master
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Your branch is up to date with &#39;origin/master&#39;.
-Already up to date.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Switched to branch &#39;master&#39;
-fatal: could not read Username for &#39;https://github.com&#39;: No such device or address
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-14f5b419443f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git checkout master\ngit merge mabranche\ngit push origin master\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git checkout master\ngit merge mabranche\ngit push origin master\n&#39;&#39; returned non-zero exit status 128.</pre>
-</div>
-</div>
+git push origin master</p>
 
 </div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Partager-votre-travail-sur-le-serveur">Partager votre travail sur le serveur<a class="anchor-link" href="#Partager-votre-travail-sur-le-serveur">&#182;</a></h2><h2 id="Option-2-:-Pousser-la-branche-locale-sur-le-serveur">Option 2 : Pousser la branche locale sur le serveur<a class="anchor-link" href="#Option-2-:-Pousser-la-branche-locale-sur-le-serveur">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git checkout mabranche
-git push origin mabranche
-</pre></div>
-
-     </div>
 </div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Switched to branch &#39;mabranche&#39;
-fatal: could not read Username for &#39;https://github.com&#39;: No such device or address
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-11-dbc37cd5751e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git checkout mabranche\ngit push origin mabranche\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git checkout mabranche\ngit push origin mabranche\n&#39;&#39; returned non-zero exit status 128.</pre>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git checkout mabranche
+git push origin mabranche</p>
 
 </div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Mise-&#224;-jour-depuis-le-d&#233;p&#244;t-distant">Mise &#224; jour depuis le d&#233;p&#244;t distant<a class="anchor-link" href="#Mise-&#224;-jour-depuis-le-d&#233;p&#244;t-distant">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git checkout master
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git checkout master
 git fetch origin
-git merge origin/master
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Your branch is up to date with &#39;origin/master&#39;.
-Already up to date.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Switched to branch &#39;master&#39;
-From https://github.com/pnavaro/agrocampus
- * [new branch]      gh-pages   -&gt; origin/gh-pages
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git checkout mabranche
-git merge master
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Already up to date.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Switched to branch &#39;mabranche&#39;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Si votre branche locale n'est pas présente sur le serveur, vous pouvez utiliser <code>rebase</code> à la place de <code>merge</code>. Cette opération permet de récrire l'historique en datant vos modifcations postérieures à la dernière modification de la branche master.</p>
+git merge origin/master</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Conflits">Conflits<a class="anchor-link" href="#Conflits">&#182;</a></h1>
+<p>git checkout mabranche
+git merge master</p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span>git mergetool
-</pre></div>
+<p>Si votre branche locale n'est pas présente sur le serveur, vous pouvez utiliser <code>rebase</code> à la place de <code>merge</code>. Cette opération permet de récrire l'historique en datant vos modifications postérieures à la dernière modification de la branche master.</p>
 
 </div>
 </div>
@@ -15230,274 +14733,35 @@ git merge master
 <h2 id="Stash">Stash<a class="anchor-link" href="#Stash">&#182;</a></h2><p>Permet d'enregistrer l'état de vos fichiers sans enregistrer les modifications par un <code>commit</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git stash
-git stash show
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>No local changes to save
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>No stash entries found.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-14-d6e25b2f2d45&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git stash\ngit stash show\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git stash\ngit stash show\n&#39;&#39; returned non-zero exit status 1.</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git stash pop
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>No stash entries found.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-15-c43317960696&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git stash pop\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git stash pop\n&#39;&#39; returned non-zero exit status 1.</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Supprimer avec</p>
+<p>git stash
+git stash show</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git stash drop
-</pre></div>
-
-     </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Appliquer-un-stash">Appliquer un <code>stash</code><a class="anchor-link" href="#Appliquer-un-stash">&#182;</a></h3>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>No stash entries found.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-16-e5f939d7b59f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git stash drop\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git stash drop\n&#39;&#39; returned non-zero exit status 1.</pre>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git stash pop</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Supprimer-un-stash">Supprimer un <code>stash</code><a class="anchor-link" href="#Supprimer-un-stash">&#182;</a></h3>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git stash drop</p>
 
 </div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15515,7 +14779,7 @@ git stash drop
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Pourquoi-pas">Pourquoi pas<a class="anchor-link" href="#Pourquoi-pas">&#182;</a></h2><ul>
-<li>Difficile à comprendre pour les anciens adpetes de cvs et subversion.</li>
+<li>Difficile à apprendre pour les utilisateurs de cvs et subversion qui sont moins puissants mais plus simples et souvent suffisants dans beaucoup de cas.</li>
 <li>Syntaxe en ligne de commande un peu folle et parfois confuse.</li>
 <li>Il faut parfois enchainer beaucoup d'instructions pour des opérations assez simples.</li>
 <li>L'historique créé par git est parfois étrange, certaines modifications peuvent changer d'auteur.</li>
@@ -15532,91 +14796,12 @@ git stash drop
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git diff --name-status master..mybranch
-</pre></div>
-
-     </div>
 </div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>fatal: ambiguous argument &#39;master..mybranch&#39;: unknown revision or path not in the working tree.
-Use &#39;--&#39; to separate paths from revisions, like this:
-&#39;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#39;
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">CalledProcessError</span>                        Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-17-032ee5eed483&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_cell_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bash&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;git diff --name-status master..mybranch\n&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_cell_magic</span><span class="ansi-blue-fg">(self, magic_name, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2379</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2380</span>                 args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>magic_arg_s<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2381</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2382</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2383</span> 
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">named_script_magic</span><span class="ansi-blue-fg">(line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    140</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    141</span>                 line <span class="ansi-blue-fg">=</span> script
-<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>shebang<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    143</span> 
-<span class="ansi-green-intense-fg ansi-bold">    144</span>         <span class="ansi-red-fg"># write a basic docstring:</span>
-
-<span class="ansi-green-fg">&lt;decorator-gen-103&gt;</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/share/miniconda3/envs/runenv/lib/python3.8/site-packages/IPython/core/magics/script.py</span> in <span class="ansi-cyan-fg">shebang</span><span class="ansi-blue-fg">(self, line, cell)</span>
-<span class="ansi-green-intense-fg ansi-bold">    243</span>             sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">.</span>flush<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    244</span>         <span class="ansi-green-fg">if</span> args<span class="ansi-blue-fg">.</span>raise_error <span class="ansi-green-fg">and</span> p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 245</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> CalledProcessError<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">.</span>returncode<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> output<span class="ansi-blue-fg">=</span>out<span class="ansi-blue-fg">,</span> stderr<span class="ansi-blue-fg">=</span>err<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    246</span> 
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     <span class="ansi-green-fg">def</span> _run_script<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">,</span> cell<span class="ansi-blue-fg">,</span> to_close<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">CalledProcessError</span>: Command &#39;b&#39;git diff --name-status master..mybranch\n&#39;&#39; returned non-zero exit status 128.</pre>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git diff --name-status master..mybranch</p>
 
 </div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15625,50 +14810,53 @@ Use &#39;--&#39; to separate paths from revisions, like this:
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span>%%bash
-git diff mabranche master -- intro.md
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git diff mabranche master -- intro.md</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id=".gitignore">.gitignore<a class="anchor-link" href="#.gitignore">&#182;</a></h2><p>Si votre dépôt contient un fichier <code>.gitignore</code> avec une liste de fichiers, les modifications de ces fichiers seront ignorés par git. Je conseille de supprimer ces fichiers de l'historique avant de les ignorer.</p>
 <ul>
-<li>Effacer tous les fichiers ignorés (a faire après un commit)</li>
+<li>Pour effacer tous les fichiers ignorés (à faire après un commit)</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-
-<pre><code>git clean -xdf</code></pre>
+<p>git clean -xdf</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Ignorer tous les changements et revenir au point de départ</li>
+<h2 id="Ignorer-tous-les-changements-et-revenir-au-point-de-d&#233;part">Ignorer tous les changements et revenir au point de d&#233;part<a class="anchor-link" href="#Ignorer-tous-les-changements-et-revenir-au-point-de-d&#233;part">&#182;</a></h2><ul>
+<li>Sur un fichier</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>%%bash
-git checkout myfile.cpp
-git reset --hard</p>
+<p>git checkout README.md</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Pour revenir au point de départ</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>git reset --hard</p>
 
 </div>
 </div>
